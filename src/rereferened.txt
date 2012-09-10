@@ -1,0 +1,107 @@
+private boolean zzEOFDone;
+    private Reader zzReader = null;
+
+
+
+      @Override
+         public void reset(CharSequence buffer, int start, int end, int initialState) {
+             //To change body of implemented methods use File | Settings | File Templates.
+
+
+             zzBuffer = com.intellij.util.text.CharArrayUtil.fromSequenceWithoutCopying(buffer);
+             zzCurrentPos = zzMarkedPos = zzStartRead = start;
+             zzPushbackPos = 0;
+             zzAtEOF = false;
+             zzAtBOL = true;
+             zzEndRead = end;
+             yybegin(initialState);
+
+
+
+
+         }
+
+
+
+
+         // in switch statement
+
+         case 3:
+                   {
+                       System.out.println("INTEGER");
+                       return JaggeryTokenTypes.INTEGER;
+                   }
+                 case 13: break;
+                 case 6:
+                   {
+                       System.out.println("DATAFORMAT");
+                       return JaggeryTokenTypes.DATAFORMAT;
+                   }
+                 case 14: break;
+                 case 7:
+                   {   System.out.println("FEED");
+                       return JaggeryTokenTypes.FEED;
+                   }
+                 case 15: break;
+                 case 1:
+                   { yybegin(YYINITIAL);
+                       System.out.println("BAD_CHARACTER");
+                 return JaggeryTokenTypes.BAD_CHARACTER;
+                   }
+                 case 16: break;
+                 case 9:
+                   {   System.out.println("ADDONS");
+                       return JaggeryTokenTypes.ADDONS;
+                   }
+                 case 17: break;
+                 case 8:
+                   {   System.out.println("FILESYS");
+                       return JaggeryTokenTypes.FILESYS;
+                   }
+                 case 18: break;
+                 case 12:
+                   {   System.out.println("STORAGE");
+                       return JaggeryTokenTypes.STORAGE;
+                   }
+                 case 19: break;
+                 case 4:
+                   {   System.out.println("CLIENT");
+                       return JaggeryTokenTypes.CLIENT;
+                   }
+                 case 20: break;
+                 case 11:
+                   {
+                       System.out.println("UTILS");
+                       return JaggeryTokenTypes.UTILS;
+                   }
+                 case 21: break;
+                 case 5:
+                   {   System.out.println("OUTPUT");
+                       return JaggeryTokenTypes.OUTPUT;
+                   }
+                 case 22: break;
+                 case 10:
+                   {   System.out.println("VARIABLE");
+                       return JaggeryTokenTypes.VARIABLE;
+                   }
+                 case 23: break;
+                 case 2:
+                   {
+                   }
+                 case 24: break;
+                 default:
+                   if (zzInput == YYEOF && zzStartRead == zzCurrentPos) {
+                     zzAtEOF = true;
+                     zzDoEOF();
+                     return null;
+                   }
+                   else {
+                     zzScanError(ZZ_NO_MATCH);
+                   }
+               }
+
+
+
+
+         zzBufferL.charAt(zzCurrentPosL++)
+

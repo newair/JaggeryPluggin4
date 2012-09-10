@@ -1,0 +1,37 @@
+<idea-plugin version="2">
+  <name>JaggeryPluggin4</name>
+  <description>short description of the plugin</description>
+  <version>1.0</version>
+  <vendor>YourCompany</vendor>
+
+  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="107.105"/>
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+
+      <fileTypeFactory  implementation="wso2.org.fileType.JaggeryFileTypeFactory"/>
+
+  <lang.syntaxHighlighterFactory implementationClass="wso2.org.highlighting.HighlighterFactory" key="jaggery" />
+
+   <!--   <colorSettingsPage implementation="wso2.org.highlighting.JaggerycolourSettings" />                -->
+      <!--     <syntaxHighlighter implementationClass="wso2.org.highlighting.SyntaxHighlightHandler" key="jaggery" />         -->
+   <lang.parserDefinition implementationClass="wso2.org.psi.JaggeryParserDefinition" language="jaggery" />
+
+      <lang.fileViewProviderFactory language="jaggery" implementationClass="wso2.org.fileType.JaggeryFileViewProviderFactory"  />
+
+     <!--  <lang.fileViewProviderFactory implementationClass="wso2.org.fileType.JaggeryFileViewProviderFactory" language="jaggery"></lang.fileViewProviderFactory> -->
+  </extensions>
+</idea-plugin>
